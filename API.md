@@ -20,7 +20,7 @@ Name|Description
 
 Name|Description
 ----|-----------
-[ModerationLabels](#cdk-image-moderation-moderationlabels)|*No description*
+[ModerationLabels](#cdk-image-moderation-moderationlabels)|content moderation labels.
 
 
 
@@ -119,7 +119,7 @@ Name | Type | Description
 
 ## enum ModerationLabels  <a id="cdk-image-moderation-moderationlabels"></a>
 
-
+content moderation labels.
 
 Name | Description
 -----|-----
@@ -128,5 +128,13 @@ Name | Description
 **SEXUAL_ACTIVITY** |
 **SUGGESTIVE** |
 **PARTIAL_NUDITY** |
+**VIOLENCE** |
+**VISUALLY_DISTURBING** |
+**RUDE_GESTURES** |
+**DRUGS** |
+**TOBACCO** |
+**ALCOHOL** |
+**GAMBLING** |
+**HATE_SYMBOLS** |
 
 

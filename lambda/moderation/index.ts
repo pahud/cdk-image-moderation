@@ -14,6 +14,13 @@ export async function handler(event: any) {
     console.log(uri)
     const result = await imageCheck(bucket, key)
     console.log('only labels:', process.env.ONLY_LABELS)
+    const onlyLabels = process.env.ONLY_LABELS
+    const filtered = result.ModerationLabels.filter(i => onlyLabels.includes(i.Name))
+    // do nothing if not matched any label
+    if (filtered.length == 0) { 
+      console.log('image is safe')
+      return 
+    }
     // generate a presign URL for preview
     const presignedUrl = await s3.getSignedUrlPromise('getObject', {
       Bucket: bucket,

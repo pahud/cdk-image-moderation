@@ -8,12 +8,24 @@ import * as sns from '@aws-cdk/aws-sns';
 import * as snss from '@aws-cdk/aws-sns-subscriptions';
 import * as cdk from '@aws-cdk/core';
 
+/**
+ * content moderation labels
+ * @see https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html
+ */
 export enum ModerationLabels {
   EXPLICIT_NUDITY = 'Explicit Nudity',
   NUDITY = 'Nudity',
   SEXUAL_ACTIVITY = 'Sexual Activity',
   SUGGESTIVE = 'Suggestive',
   PARTIAL_NUDITY = 'Partial Nudity',
+  VIOLENCE = 'Violence',
+  VISUALLY_DISTURBING = 'Visually Disturbing',
+  RUDE_GESTURES = 'Rude Gestures',
+  DRUGS = 'Drugs',
+  TOBACCO = 'Tobacco',
+  ALCOHOL = 'Alcohol',
+  GAMBLING = 'Gambling',
+  HATE_SYMBOLS = 'Hate Symbols',
 }
 
 export interface ModerationProps {
@@ -52,7 +64,7 @@ export class Moderation extends cdk.Construct {
       bundling: {
         define: {
           'process.env.ONLY_LABELS': props.moderationLabels ?
-            JSON.stringify(props.moderationLabels.map(x => { x.valueOf(); })) : '',
+            JSON.stringify(props.moderationLabels.map(x => x.valueOf() )) : '',
         },
       },
       environment: {
@@ -130,7 +142,6 @@ const stack = new cdk.Stack(app, 'moderation-demo', { env });
 const mod = new Moderation(stack, 'Mod', {
   moderationLabels: [
     ModerationLabels.EXPLICIT_NUDITY,
-    ModerationLabels.SUGGESTIVE,
   ],
 });
 
