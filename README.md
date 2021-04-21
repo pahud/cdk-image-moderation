@@ -55,8 +55,8 @@ cdk deploy
 ```sh
 export TELEGRAM_TOKEN=<YOUR_TOKEN>
 # run `yarn build` or `yarn watch` to generate the lib
-cdk --app lib/main.js diff
-cdk --app lib/main.js deploy
+cdk --app lib/integ.default.js diff
+cdk --app lib/integ.default.js deploy
 ```
 
 On deploy completed, you will get the S3 bucket in the `Outputs`. Simply upload any images into this bucket and you should be able to get the notification from the Telegram chatroom.
