@@ -2,7 +2,7 @@
 
 Event-driven image moderation and notification service with AWS CDK
 
-![](images/diagram.svg)
+![](images/cdk-image-moderation.svg)
 
 # Sample
 
