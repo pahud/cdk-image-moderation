@@ -38,6 +38,7 @@ yarn-error.log*
 !/.eslintrc.json
 !/.github/pull_request_template.md
 !/.github/workflows/build.yml
+!/.github/workflows/projenyarnupgrade.yml
 !/.github/workflows/release.yml
 !/.mergify.yml
 !/.npmignore
