@@ -38,6 +38,11 @@ const project = new AwsCdkConstructLibrary({
   ],
   dependabot: false,
   mergify: false,
+  jestOptions: {
+    jestConfig: {
+      setupFilesAfterEnv: ['./test/jest.setup.js'],
+    },
+  },
   publishToPypi: {
     distName: 'cdk-image-moderation',
     module: 'cdk_image_moderation',

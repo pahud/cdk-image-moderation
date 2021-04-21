@@ -444,7 +444,7 @@ Object {
           "Variables": Object {
             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
             "TELEGRAM_CHAT_ID": "-547476398",
-            "TELEGRAM_TOKEN": "916989357:AAHIiz2ZUFDQvXSJDK6P3_mbv2xiT5FRhMA",
+            "TELEGRAM_TOKEN": "mock",
           },
         },
         "Handler": "index.handler",

@@ -1,7 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import { Moderation, ModerationLabels, SNS2Telegram } from './';
 
-
 export class IntegTesting {
   readonly stack: cdk.Stack[];
   constructor() {

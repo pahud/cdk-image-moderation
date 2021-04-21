@@ -88,6 +88,9 @@
   "license": "Apache-2.0",
   "version": "0.0.0",
   "jest": {
+    "setupFilesAfterEnv": [
+      "./test/jest.setup.js"
+    ],
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",
       "**/?(*.)+(spec|test).ts?(x)"
