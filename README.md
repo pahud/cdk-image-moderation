@@ -1,3 +1,7 @@
+[![NPM version](https://badge.fury.io/js/cdk-image-moderation.svg)](https://badge.fury.io/js/cdk-image-moderation)
+[![PyPI version](https://badge.fury.io/py/cdk-image-moderation.svg)](https://badge.fury.io/py/cdk-image-moderation)
+[![Release](https://github.com/pahud/cdk-image-moderation/actions/workflows/release.yml/badge.svg)](https://github.com/pahud/cdk-image-moderation/actions/workflows/release.yml)
+
 # cdk-image-moderation
 
 Event-driven image moderation and notification service with AWS CDK
