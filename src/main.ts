@@ -142,6 +142,11 @@ const stack = new cdk.Stack(app, 'moderation-demo', { env });
 const mod = new Moderation(stack, 'Mod', {
   moderationLabels: [
     ModerationLabels.EXPLICIT_NUDITY,
+    ModerationLabels.DRUGS,
+    ModerationLabels.TOBACCO,
+    ModerationLabels.ALCOHOL,
+    ModerationLabels.VIOLENCE,
+    ModerationLabels.RUDE_GESTURES,
   ],
 });
 
