@@ -2,6 +2,8 @@
 
 Event-driven image moderation and notification service with AWS CDK
 
+![](images/diagram.svg)
+
 # Sample
 
 This sample create a S3 bucket that will trigger image moderation check on object created and send notification to SNS when specific moderation labels are detected. The `SNS2Telegram` creates a Lambda function as the SNS topic subscription which fires the notification to a private Telegram chatroom with the image preview and moderation result.
