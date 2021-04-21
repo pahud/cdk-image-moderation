@@ -110,14 +110,15 @@ export interface SNS2TelegramProps {
 export class SNS2Telegram extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props: SNS2TelegramProps) {
     super(scope, id);
-    if (!process.env.TELEGRAM_TOKEN) {
-      throw new Error('missing TELEGRAM_TOKEN in tne environment variable');
+    const telegramToken = process.env.TELEGRAM_TOKEN || this.node.tryGetContext('TELEGRAM_TOKEN');
+    if (!telegramToken) {
+      throw new Error('missing TELEGRAM_TOKEN in env var or context variable');
     }
     const fn = new NodejsFunction(this, 'SNS2TG', {
       entry: path.join(__dirname, '../lambda/sns2telegram/index.ts'),
       runtime: lambda.Runtime.NODEJS_14_X,
       environment: {
-        TELEGRAM_TOKEN: process.env.TELEGRAM_TOKEN ?? 'undefined',
+        TELEGRAM_TOKEN: telegramToken,
         TELEGRAM_CHAT_ID: props.chatid,
       },
     });
@@ -130,23 +131,3 @@ export class SNS2Telegram extends cdk.Construct {
     });
   }
 }
-
-const app = new cdk.App();
-const env = {
-  region: process.env.CDK_DEFAULT_REGION,
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-};
-const stack = new cdk.Stack(app, 'moderation-demo', { env });
-
-// create the moderation
-const mod = new Moderation(stack, 'Mod', {
-  moderationLabels: [
-    ModerationLabels.EXPLICIT_NUDITY,
-  ],
-});
-
-// sns to telegram
-new SNS2Telegram(stack, 'SNS2TG', {
-  topic: mod.topic,
-  chatid: '-547476398',
-});
