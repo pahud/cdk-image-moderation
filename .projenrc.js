@@ -1,5 +1,5 @@
-const { AwsCdkConstructLibrary } = require('projen');
 const { Automation } = require('projen-automate-it');
+const { AwsCdkConstructLibrary } = require('projen');
 const { Mergify } = require('projen/lib/github');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
