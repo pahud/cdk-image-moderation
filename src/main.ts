@@ -1,11 +1,11 @@
 import * as path from 'path';
 import * as iam from '@aws-cdk/aws-iam';
-import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import * as lambda from '@aws-cdk/aws-lambda';
-import * as s3n from '@aws-cdk/aws-s3-notifications';
+import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import * as s3 from '@aws-cdk/aws-s3';
-import * as snss from '@aws-cdk/aws-sns-subscriptions';
+import * as s3n from '@aws-cdk/aws-s3-notifications';
 import * as sns from '@aws-cdk/aws-sns';
+import * as snss from '@aws-cdk/aws-sns-subscriptions';
 import * as cdk from '@aws-cdk/core';
 
 /**
