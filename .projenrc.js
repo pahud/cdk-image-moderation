@@ -1,5 +1,4 @@
 const { AwsCdkConstructLibrary } = require('projen');
-const { Automation } = require('projen-automate-it');
 const { Mergify } = require('projen/lib/github');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
@@ -32,9 +31,6 @@ const project = new AwsCdkConstructLibrary({
     'aws-sdk',
     'axios',
     'esbuild',
-  ],
-  devDeps: [
-    'projen-automate-it',
   ],
   dependabot: false,
   mergify: false,
@@ -91,12 +87,6 @@ const mergifyRules = [
 new Mergify(project.github, {
   rules: mergifyRules,
 });
-
-const automation = new Automation(project, {
-  automationToken: AUTOMATION_TOKEN,
-});
-
-automation.projenYarnUpgrade();
 
 const common_exclude = [
   'cdk.out',
