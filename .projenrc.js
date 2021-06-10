@@ -106,6 +106,11 @@ const common_exclude = [
   '.env',
 ];
 
+project.package.addField('resolutions', {
+  'trim-newlines': '3.0.1',
+});
+
+
 project.npmignore.exclude(...common_exclude, 'images');
 project.gitignore.exclude(...common_exclude);
 
