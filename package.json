@@ -45,7 +45,7 @@
     "jest-junit": "^12",
     "jsii": "^1.30.0",
     "jsii-diff": "^1.30.0",
-    "jsii-docgen": "^1.8.103",
+    "jsii-docgen": "^1.8.104",
     "jsii-pacmak": "^1.30.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
@@ -74,7 +74,7 @@
     "@aws-cdk/aws-sns": "^1.95.2",
     "@aws-cdk/aws-sns-subscriptions": "^1.95.2",
     "@aws-cdk/core": "^1.95.2",
-    "aws-sdk": "^2.933.0",
+    "aws-sdk": "^2.934.0",
     "axios": "^0.21.1",
     "esbuild": "^0.12.9"
   },
