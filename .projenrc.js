@@ -4,7 +4,7 @@ const { Mergify } = require('projen/lib/github');
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
 const project = new AwsCdkConstructLibrary({
-  author: 'Pahud',
+  author: 'Pahud Hsieh',
   authorAddress: 'pahudnet@gmail.com',
   cdkVersion: '1.95.2',
   defaultReleaseBranch: 'main',
