@@ -74,7 +74,7 @@
     "@aws-cdk/aws-sns": "^1.95.2",
     "@aws-cdk/aws-sns-subscriptions": "^1.95.2",
     "@aws-cdk/core": "^1.95.2",
-    "aws-sdk": "^2.959.0",
+    "aws-sdk": "^2.960.0",
     "axios": "^0.21.1",
     "esbuild": "^0.12.17"
   },
