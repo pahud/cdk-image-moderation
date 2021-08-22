@@ -76,7 +76,7 @@
     "@aws-cdk/core": "^1.95.2",
     "aws-sdk": "^2.973.0",
     "axios": "^0.21.1",
-    "esbuild": "^0.12.21"
+    "esbuild": "^0.12.22"
   },
   "bundledDependencies": [
     "aws-sdk",
