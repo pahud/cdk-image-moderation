@@ -22,6 +22,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/aws-s3-notifications',
   ],
+  minNodeVersion: '12.20.0',
   deps: [
     'esbuild',
     'aws-sdk',
@@ -33,6 +34,7 @@ const project = new AwsCdkConstructLibrary({
     'esbuild',
   ],
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: AUTOMATION_TOKEN,
@@ -105,11 +107,6 @@ const common_exclude = [
   'demo_images',
   '.env',
 ];
-
-project.package.addField('resolutions', {
-  'trim-newlines': '3.0.1',
-});
-
 
 project.npmignore.exclude(...common_exclude, 'images');
 project.gitignore.exclude(...common_exclude);
