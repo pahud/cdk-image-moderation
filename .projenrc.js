@@ -22,7 +22,6 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/aws-s3-notifications',
   ],
-  minNodeVersion: '12.20.0',
   deps: [
     'esbuild',
     'aws-sdk',
@@ -97,6 +96,12 @@ const mergifyRules = [
 
 new Mergify(project.github, {
   rules: mergifyRules,
+});
+
+
+project.package.addField('resolutions', {
+  'pac-resolver': '^5.0.0',
+  'set-value': '^4.0.1',
 });
 
 const common_exclude = [
