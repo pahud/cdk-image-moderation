@@ -50,6 +50,7 @@ junit.xml
 tsconfig.json
 !/API.md
 !/.mergify.yml
+!/.gitpod.yml
 cdk.out
 cdk.context.json
 yarn-error.log
