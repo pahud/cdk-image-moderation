@@ -26,6 +26,7 @@ const project = new AwsCdkConstructLibrary({
     'aws-sdk',
     'axios',
   ],
+  devDeps: ['esbuild'],
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     ignoreProjen: false,
     workflowOptions: {
