@@ -98,10 +98,6 @@
       "type": "bundled"
     },
     {
-      "name": "esbuild",
-      "type": "bundled"
-    },
-    {
       "name": "@aws-cdk/aws-iam",
       "version": "^1.95.2",
       "type": "peer"
@@ -184,18 +180,6 @@
     {
       "name": "@aws-cdk/core",
       "version": "^1.95.2",
-      "type": "runtime"
-    },
-    {
-      "name": "aws-sdk",
-      "type": "runtime"
-    },
-    {
-      "name": "axios",
-      "type": "runtime"
-    },
-    {
-      "name": "esbuild",
       "type": "runtime"
     }
   ],

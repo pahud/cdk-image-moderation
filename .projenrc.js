@@ -22,15 +22,9 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/aws-s3-notifications',
   ],
-  deps: [
-    'esbuild',
-    'aws-sdk',
-    'axios',
-  ],
   bundledDeps: [
     'aws-sdk',
     'axios',
-    'esbuild',
   ],
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     ignoreProjen: false,
