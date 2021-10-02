@@ -78,8 +78,8 @@
     "@aws-cdk/aws-sns": "^1.95.2",
     "@aws-cdk/aws-sns-subscriptions": "^1.95.2",
     "@aws-cdk/core": "^1.95.2",
-    "aws-sdk": "^2.998.0",
-    "axios": "^0.21.4"
+    "aws-sdk": "^2.999.0",
+    "axios": "^0.22.0"
   },
   "bundledDependencies": [
     "aws-sdk",
