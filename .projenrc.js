@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism, DevEnvironmentDockerImage, Gitpod } = require('projen');
+const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod } = require('projen');
 const { Mergify } = require('projen/lib/github');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
@@ -27,13 +27,13 @@ const project = new AwsCdkConstructLibrary({
     'axios',
   ],
   devDeps: ['esbuild'],
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgradeOptions: {
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: AUTOMATION_TOKEN,
     },
-  }),
+  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['pahud'],
@@ -49,50 +49,6 @@ const project = new AwsCdkConstructLibrary({
     module: 'cdk_image_moderation',
   },
 });
-
-const mergifyRules = [
-  {
-    name: 'Automatic merge on approval and successful build',
-    actions: {
-      merge: {
-        method: 'squash',
-        commit_message: 'title+body',
-        strict: 'smart',
-        strict_method: 'merge',
-      },
-      delete_head_branch: {},
-    },
-    conditions: [
-      '#approved-reviews-by>=1',
-      'status-success=build',
-      '-title~=(WIP|wip)',
-      '-label~=(blocked|do-not-merge)',
-    ],
-  },
-  {
-    name: 'Automatic merge PRs with auto-merge label upon successful build',
-    actions: {
-      merge: {
-        method: 'squash',
-        commit_message: 'title+body',
-        strict: 'smart',
-        strict_method: 'merge',
-      },
-      delete_head_branch: {},
-    },
-    conditions: [
-      'label=auto-merge',
-      'status-success=build',
-      '-title~=(WIP|wip)',
-      '-label~=(blocked|do-not-merge)',
-    ],
-  },
-];
-
-new Mergify(project.github, {
-  rules: mergifyRules,
-});
-
 
 project.package.addField('resolutions', {
   'pac-resolver': '^5.0.0',

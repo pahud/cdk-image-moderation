@@ -49,7 +49,6 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
-!/.mergify.yml
 !/.gitpod.yml
 cdk.out
 cdk.context.json
