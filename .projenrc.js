@@ -38,7 +38,6 @@ const project = new AwsCdkConstructLibrary({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['pahud'],
   },
-  mergify: false,
   jestOptions: {
     jestConfig: {
       setupFilesAfterEnv: ['./test/jest.setup.js'],
