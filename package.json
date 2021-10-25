@@ -39,7 +39,7 @@
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
-    "esbuild": "^0.13.8",
+    "esbuild": "^0.13.9",
     "eslint": "^7.32.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -52,7 +52,7 @@
     "jsii-pacmak": "^1.40.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.31.6",
+    "projen": "^0.31.11",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
     "typescript": "^4.4.4"
@@ -77,7 +77,7 @@
     "@aws-cdk/aws-sns": "^1.95.2",
     "@aws-cdk/aws-sns-subscriptions": "^1.95.2",
     "@aws-cdk/core": "^1.95.2",
-    "aws-sdk": "^2.1012.0",
+    "aws-sdk": "^2.1013.0",
     "axios": "^0.23.0"
   },
   "bundledDependencies": [
