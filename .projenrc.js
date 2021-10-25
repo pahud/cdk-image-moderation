@@ -7,6 +7,7 @@ const project = new AwsCdkConstructLibrary({
   author: 'Pahud Hsieh',
   authorAddress: 'pahudnet@gmail.com',
   cdkVersion: '1.95.2',
+  minNodeVersion: '12.20.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'cdk-image-moderation',
