@@ -52,7 +52,7 @@
     "jsii-pacmak": "^1.40.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.31.11",
+    "projen": "^0.31.12",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
     "typescript": "^4.4.4"
@@ -77,8 +77,8 @@
     "@aws-cdk/aws-sns": "^1.95.2",
     "@aws-cdk/aws-sns-subscriptions": "^1.95.2",
     "@aws-cdk/core": "^1.95.2",
-    "aws-sdk": "^2.1013.0",
-    "axios": "^0.23.0"
+    "aws-sdk": "^2.1014.0",
+    "axios": "^0.24.0"
   },
   "bundledDependencies": [
     "aws-sdk",
